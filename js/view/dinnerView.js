@@ -1,5 +1,4 @@
 var MyDinner = function(container, model){
-		
 
 		this.headerText =container.find("#headerText");
 		this.starter = container.find("#starter");
@@ -14,14 +13,12 @@ var MyDinner = function(container, model){
 		this.mainPrice = container.find("#mainPrice");
 		this.dessertPrice = container.find("#dessertPrice");
 
-this.update = function(type, id){ 
+		this.update = function(type, id){
 		var people = model.getNumberOfGuests();
 		this.headerText.append("<h3>My dinner: " + people + " people</h3>");
 
-
 		//Full menu
 		var menu = model.getFullMenu();
-
 
 		//starter
 		var menu1 = menu[0];
@@ -29,13 +26,11 @@ this.update = function(type, id){
 		this.starterName.append(menu1.name);
 		this.starterPrice.append(model.getDishPrice(menu1.id) *people + "kr");
 
-
 		//main dish
 		var menu2 = menu[1];
 		this.main.attr("src","./images/" + menu2.image);
 		this.mainName.append(menu2.name);
 		this.mainPrice.append(model.getDishPrice(menu2.id) *people + "kr");
-
 
 		//dessert
 		var menu3 = menu[2];
@@ -43,8 +38,6 @@ this.update = function(type, id){
 		this.dessertName.append(menu3.name);
 		this.dessertPrice.append(model.getDishPrice(menu3.id) * people + "kr");
 
-		
 		this.totalMenuPrice.append("Total cost: " + model.getTotalMenuPrice() + "kr");
 	}
-
 }

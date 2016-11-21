@@ -1,6 +1,5 @@
 var confirmDinnerCtrl = function(ctrl, model, view1, view2){
 //knapp så att man kommer till #lastView
-//Tar in:
 //overallstateCtrl, model, firstView, dinnerView
 		$('#confirmDinnerButton').on('click', function( event ){
 				var menu = model.setActiveDish();
@@ -8,7 +7,4 @@ var confirmDinnerCtrl = function(ctrl, model, view1, view2){
 				console.log(menu);
 				view2.update(menu);
     	});
-
-
-
 }

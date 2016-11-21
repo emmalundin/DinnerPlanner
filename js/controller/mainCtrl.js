@@ -22,10 +22,5 @@ var OverallstateCtrl = function(viewList, divNames, model){
 				$(divNames[6]).show();
 
 		}
-
 	}
-
-
-
 }
-

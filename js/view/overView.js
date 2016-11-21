@@ -1,8 +1,8 @@
 var OverView = function(container, model){
 
-	//My dinner på slutet 
-		
-		this.mainImg = container.find("#mainImg"); 
+	//My dinner på slutet
+
+		this.mainImg = container.find("#mainImg");
 		this.headerText = container.find("#headerText");
 		this.menuImgs = container.find("#menuImgs");
 		this.starter = container.find("#starter");
@@ -16,12 +16,12 @@ var OverView = function(container, model){
 		this.starterPrice = container.find("#starterPrice");
 		this.mainPrice = container.find("#mainPrice");
 		this.dessertPrice = container.find("#dessertPrice");
-		this.prepName =container.find("#prepName"); 
-		this.starterPrep =container.find("#starterPrep"); 
+		this.prepName =container.find("#prepName");
+		this.starterPrep =container.find("#starterPrep");
 		this.mainPrep = container.find("#mainPrep");
 		this.dessertPrep = container.find("#dessertPrep");
 
-this.update = function(type, id){
+		this.update = function(type, id){
 		var people = model.getNumberOfGuests();
 		this.headerText.append("<h3>My dinner: " + people + " people</h3>");
 
@@ -46,6 +46,6 @@ this.update = function(type, id){
 		this.dessertName.append("<h3>" + menu3.name + "</h3>");
 		this.dessertPrep.append(menu3.description);
 	}
-	
+
 
 }

@@ -1,14 +1,14 @@
 var DishInfo = function(container, model, id){
-	// Information on maträtten, med ingredienser och preparations
+	// Information about the dish, with ingredients and preparations
 
-	var activeID = 1;	
+	var activeID = 1;
 	var dish = null;
 
 	this.update = function(activeID){
-		this.prepImg =container.find("#prepImg"); 
-		this.prepName =container.find("#prepName"); 
-		this.prep =container.find("#prep"); 
-		this.ingDiv =container.find("#ingredients"); 
+		this.prepImg =container.find("#prepImg");
+		this.prepName =container.find("#prepName");
+		this.prep =container.find("#prep");
+		this.ingDiv =container.find("#ingredients");
 		this.ingCost =container.find("#ingCost");
 		this.people = container.find("#people");
 		this.confirmDishButton = container.find("#confirmDishButton");
@@ -25,13 +25,12 @@ var DishInfo = function(container, model, id){
 		var ingredients = dish.ingredients;
 		var htmlStr = "";
 		var ingCost = 0;
-		//Lägg till ID på confirmDishButton
 		var confirmDishButtonID = dish.id;
 
 		for (i in ingredients){
 			htmlStr = ingredients[i].name + " " + ingredients[i].quantity * people
 						+ " " + ingredients[i].unit + " " + ingredients[i].price * people + "kr<br/>";
-			ingCost += ingredients[i].price * people;	
+			ingCost += ingredients[i].price * people;
 			this.ingDiv.append(htmlStr);
 		}
 
@@ -48,24 +47,18 @@ var DishInfo = function(container, model, id){
 		var ingredients = dish.ingredients;
 		var htmlStr = "";
 		var ingCost = 0;
-		//Lägg till ID på confirmDishButton
 		var confirmDishButtonID = dish.id;
 
 		for (i in ingredients){
 			htmlStr = ingredients[i].name + " " + ingredients[i].quantity * people
 						+ " " + ingredients[i].unit + " " + ingredients[i].price * people + "kr<br/>";
-			ingCost += ingredients[i].price * people;	
+			ingCost += ingredients[i].price * people;
 			this.ingDiv.append(htmlStr);
 		}
 
 		this.ingCost.html("<br/>Total cost: " + ingCost + "kr");
-
-
-
 	}
 
 		this.ingCost.html("<br/>Total cost: " + ingCost + "kr");
 	}
-	//this.update(activeID);
-
 }

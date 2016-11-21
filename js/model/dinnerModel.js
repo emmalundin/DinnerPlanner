@@ -6,16 +6,13 @@ var DinnerModel = function() {
 	var activeDish = this.activeDish = 1;
 	var activeID = 1;
 
-
 	this.setActiveDish = function(id) {
 		this.activeDish = id;
 		notifyObservers("#selectDishId");
-
 	}
 
 	this.getActiveDish = function() {
 		return this.activeDish;
-
 	}
 
 	this.setNumberOfGuests = function(num) {
@@ -29,7 +26,7 @@ var DinnerModel = function() {
 		return parseInt(numberOfGuests);
 	}
 
-	//Returns the dish that is on the menu for selected type 
+	//Returns the dish that is on the menu for selected type
 	this.getSelectedDish = function(type) {
 		return menu[type];
 	}
@@ -68,7 +65,6 @@ var DinnerModel = function() {
 		var sum = 0;
 		for(var i=0; i< ingredients.length; i++){
 			sum = sum + ingredients[i].price;
-			//console.log(ingredients[i].price);
 		}
 		return sum;
 	}
@@ -79,7 +75,7 @@ var DinnerModel = function() {
 		menu[this.getDish(id).type] = id;
 		notifyObservers();
 	}
-	
+
 	//Removes dish from menu
 	this.removeDishFromMenu = function(id) {
 		var type = this.getDish(id).type;
@@ -108,25 +104,25 @@ var DinnerModel = function() {
 			}
 		}
 	  	return dish.type == type && found;
-	  });	
+	  });
 	}
 
 	//function that returns a dish of specific ID
 	this.getDish = function (id) {
 	  for(key in dishes){
 			if(dishes[key].id == id) {
-				return dishes[key];   
+				return dishes[key];
 				//100 == "100", 100 === 100
 			}
 		}
 	}
 
 
-	// the dishes variable contains an array of all the 
+	// the dishes variable contains an array of all the
 	// dishes in the database. each dish has id, name, type,
 	// image (name of the image file), description and
-	// array of ingredients. Each ingredient has name, 
-	// quantity (a number), price (a number) and unit (string 
+	// array of ingredients. Each ingredient has name,
+	// quantity (a number), price (a number) and unit (string
 	// defining the unit i.e. "g", "slices", "ml". Unit
 	// can sometimes be empty like in the example of eggs where
 	// you just say "5 eggs" and not "5 pieces of eggs" or anything else.
@@ -136,7 +132,7 @@ var DinnerModel = function() {
 		'type':'starter',
 		'image':'toast.jpg',
 		'description':"In a large mixing bowl, beat the eggs. Add the milk, brown sugar and nutmeg; stir well to combine. Soak bread slices in the egg mixture until saturated. Heat a lightly oiled griddle or frying pan over medium high heat. Brown slices on both sides, sprinkle with cinnamon and serve hot.",
-		'ingredients':[{ 
+		'ingredients':[{
 			'name':'eggs',
 			'quantity':0.5,
 			'unit':'',
@@ -168,7 +164,7 @@ var DinnerModel = function() {
 		'type':'starter',
 		'image':'sourdough.jpg',
 		'description':"Here is how you make it... Lore ipsum...",
-		'ingredients':[{ 
+		'ingredients':[{
 			'name':'active dry yeast',
 			'quantity':0.5,
 			'unit':'g',
@@ -190,7 +186,7 @@ var DinnerModel = function() {
 		'type':'starter',
 		'image':'bakedbrie.jpg',
 		'description':"Here is how you make it... Lore ipsum...",
-		'ingredients':[{ 
+		'ingredients':[{
 			'name':'round Brie cheese',
 			'quantity':10,
 			'unit':'g',
@@ -212,7 +208,7 @@ var DinnerModel = function() {
 		'type':'starter',
 		'image':'toastskagen.jpg',
 		'description':"Toast Skagen is an elegant combination of prawns and other ingredients on a small piece of sautéed bread. Make toast. Put skagenrmix that you bought at ICA on toast. Garnish with dill.",
-		'ingredients':[{ 
+		'ingredients':[{
 			'name':'Prawns',
 			'quantity':16,
 			'unit':'pcs',
@@ -234,7 +230,7 @@ var DinnerModel = function() {
 		'type':'starter',
 		'image':'elkcarpaccio.jpg',
 		'description':"Combine salt, black pepper and half the brown sugar. Place loin in a shallow pan and cover completely with mixture, top and bottom. Cover and refrigerate 8 to 12 hours.",
-		'ingredients':[{ 
+		'ingredients':[{
 			'name':'Elk meat',
 			'quantity':100,
 			'unit':'g',
@@ -256,7 +252,7 @@ var DinnerModel = function() {
 		'type':'main dish',
 		'image':'meatballs.jpg',
 		'description':"Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.",
-		'ingredients':[{ 
+		'ingredients':[{
 			'name':'extra lean ground beef',
 			'quantity':115,
 			'unit':'g',
@@ -318,7 +314,7 @@ var DinnerModel = function() {
 		'type':'main dish',
 		'image':'SpaghettiCarbonara.jpg',
 		'description':"Here is how you make it... Lore ipsum...",
-		'ingredients':[{ 
+		'ingredients':[{
 			'name':'ingredient 1',
 			'quantity':1,
 			'unit':'pieces',
@@ -340,7 +336,7 @@ var DinnerModel = function() {
 		'type':'main dish',
 		'image':'GardenSalad.jpg',
 		'description':"Here is how you make it... Lore ipsum...",
-		'ingredients':[{ 
+		'ingredients':[{
 			'name':'ingredient 1',
 			'quantity':2,
 			'unit':'pieces',
@@ -362,7 +358,7 @@ var DinnerModel = function() {
 		'type':'main dish',
 		'image':'stektstromming.jpg',
 		'description':"Here is how you make it... Lore ipsum...",
-		'ingredients':[{ 
+		'ingredients':[{
 			'name':'ingredient 1',
 			'quantity':1,
 			'unit':'pieces',
@@ -384,7 +380,7 @@ var DinnerModel = function() {
 		'type':'main dish',
 		'image':'falukorv.jpg',
 		'description':"Falukorv is a large Swedish sausage made of a grated mixture of pork and beef or veal with potato starch flour and mild spices. Note that Falukorv is a cooked sausage and can as such be eaten as is. Many Swedes slice it and eat it on a sandwich much as you would with a slice of ham.",
-		'ingredients':[{ 
+		'ingredients':[{
 			'name':'Falukorv',
 			'quantity':1,
 			'unit':'pieces',
@@ -406,7 +402,7 @@ var DinnerModel = function() {
 		'type':'dessert',
 		'image':'ChocolateIceCream.jpg',
 		'description':"Here is how you make it... Lore ipsum...",
-		'ingredients':[{ 
+		'ingredients':[{
 			'name':'ice cream',
 			'quantity':100,
 			'unit':'ml',
@@ -418,7 +414,7 @@ var DinnerModel = function() {
 		'type':'dessert',
 		'image':'icecream.jpg',
 		'description':"Here is how you make it... Lore ipsum...",
-		'ingredients':[{ 
+		'ingredients':[{
 			'name':'ice cream',
 			'quantity':100,
 			'unit':'ml',
@@ -430,7 +426,7 @@ var DinnerModel = function() {
 		'type':'dessert',
 		'image':'StrawberryIceCream.jpg',
 		'description':"Here is how you make it... Lore ipsum...",
-		'ingredients':[{ 
+		'ingredients':[{
 			'name':'ice cream',
 			'quantity':100,
 			'unit':'ml',
@@ -442,12 +438,12 @@ var DinnerModel = function() {
 		'type':'dessert',
 		'image':'cremebrulee.jpg',
 		'description':"Crème brûlée, also known as burnt cream, crema catalana, or Trinity cream is a dessert consisting of a rich custard base topped with a contrasting layer of hard caramel. It is normally served at room temperature.",
-		'ingredients':[{ 
+		'ingredients':[{
 			'name':'cream',
 			'quantity':100,
 			'unit':'ml',
 			'price':3
-			},{ 
+			},{
 			'name':'sugar',
 			'quantity':10,
 			'unit':'ml',
@@ -457,23 +453,23 @@ var DinnerModel = function() {
 	];
 
 
-	/*****************************************  
-	      Observable implementation    
+	/*****************************************
+	      Observable implementation
 	*****************************************/
 
 	var observers = [];
 
-	this.addObserver = function(observer) 
+	this.addObserver = function(observer)
 	{
 		observers.push(observer);
 	}
 
-	var notifyObservers = function(arg) 
+	var notifyObservers = function(arg)
 	{
-		for(var i=0; i<observers.length; i++) 
+		for(var i=0; i<observers.length; i++)
 		{
 			observers[i].update(arg);
-		}	
+		}
 	}
 
 }
