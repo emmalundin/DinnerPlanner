@@ -1,0 +1,10 @@
+var knappDIV = function (stateCtrl, model) {
+		
+
+	$("#infoButton").click(function(){
+		stateCtrl.switchstate(6);
+
+
+	});
+
+}

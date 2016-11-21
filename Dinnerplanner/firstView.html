@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dinner planner</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+  <body>
+  	
+	<div class="container col-lg-12">
+
+		<!-- HEADER -->
+		<div class="jumbotron col-lg-12"><h1>Dinner planner</h1><h2>Create the best parties of your life!</h2></div>
+
+		<!-- homeView -->
+
+		
+
+		<!-- LEFT VIEW -->
+		<div class="leftView col-lg-3 bg" id="leftView">
+			<div>
+				<h4>My Dinner</h4>
+				Number of guests: <span id="numberOfGuests"></span>
+			</div>
+			<div>
+          <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+				<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+			</div>			
+
+						<!-- list of chosen and total cost --> 
+						<table class="table" id="priceView">
+							<thread>
+
+								<div class="col-lg-6">
+
+									<div><br/><h5>Dishes</h5></div>
+									<div id="chosenDish"></div>
+
+								</div>
+
+								<div class="col-lg-4 col-lg-offset-1">
+									<div><br/><h5>Cost</h5></div>
+									<div id="dishCost"></div>
+								</div>
+							
+							</thread>
+						</table>
+
+						<hr></hr>
+
+					<div>	
+						<div class="col-lg-6"><h5>Total cost:</h5></div>	
+						<div class="totalCost col-lg-4 col-lg-offset-1" id="totalCost"></div>
+					</div>
+										
+
+				<button class="btn confirmbtn" id="confirmButton">Confirm dinner</button>
+		</div>
+
+
+
+		
+		<div class="prepView col-lg-8 col-lg-offset-1 bg" id="prepView">
+
+
+		<div class="col-lg-7 prep">	
+			<h1 id="prepName"></h1><button class="btn backSelectDish col-lg-offset-1" id="confirmButton">Back to select dish</button><br/><br/><br/><br/><br/>
+			<img id="prepImg" width="200px"/>
+			<h3>Preparations</h3>
+			<div class="col-lg-12" id="prep">
+			</div>
+		</div>
+
+
+			<div class="ingredients col-lg-5 col-lg-offset-0" id="ingredients">
+			<h3 id="people">Ingredients</h3>
+			</div>	
+
+			<div class="ingCost col-lg-3 col-lg-offset-0" id="ingCost"></div>
+
+			<button class="btn confirmDish col-lg-offset-3" id="confirmButton">Confirm Dish</button>
+
+		</div>
+
+
+
+
+		<!-- blabla view -->
+
+		<!-- blabla view -->
+
+		<!-- blabla view -->
+	
+
+	</div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+	<!-- The application JavaScript code -->
+	<script src="js/app.js"></script>
+	<script src="js/model/dinnerModel.js"></script>
+	<script src="js/view/firstView.js"></script>
+	<script src="js/view/dishinfoView.js"></script>
+	<script src="js/view/dinnerView.js"></script>
+	<script src="js/view/dishListView.js"></script>
+
+
+  </body>
+</html>

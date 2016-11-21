@@ -1,0 +1,193 @@
+body{
+	background-image:url('images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:100%;
+    }
+.container{
+	width:100%;
+	padding:0px;
+}
+.btn{
+	background-color: rgba(200, 233, 100, 0.30);
+	border-style:solid;
+}
+#header{
+	height: 130px;
+	background-color: rgba(200, 233, 100, 0.34);
+	border: 3px solid black;
+	vertical-align: middle;
+	font-size: 45px;
+	font-family: monospace;
+	color: black;
+	font-weight: bold;
+	padding: 30px 30px;
+}
+#subHeader{
+	font-size: 20px;
+}
+
+#cartView{
+	background-color: rgba(255, 255, 255, 0.81);
+	border: 3px solid black;
+}
+
+#desc{
+	background-color: rgba(255, 255, 255, 0.81);
+	border: 3px solid black;
+	position: relative;
+	top: 200px;
+	height: 300px;
+	width: 500px;
+	padding: 10px;
+}
+
+#createNew{
+	position:absolute;
+	bottom:10px;
+	right:10px;
+}
+
+#selectorView{
+	padding: 0px 0px;
+}
+
+#dishesHeader{
+	height: 130px;
+	background-color: rgba(202, 202, 160, 1);
+	border: 3px solid black;
+
+
+}
+#dishList, #menuList, #menuListContainer, #recipeList{
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.81);
+	border: 3px solid black;
+}
+
+#menuList{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#conf_row{
+	border-top: 1px solid black;
+	border-spacing: 10px;			
+}
+
+td{
+	padding: 10px;
+	border: 1px solid black;
+}
+
+table{
+	border: 2px solid black;
+}
+
+.dish{
+	margin:10px;
+	border: 1px solid black;
+	padding: 5px;
+	width:200px;
+	height:300px;
+	float:left;
+	word-wrap: break-word;
+	overflow:hidden;
+	font-size: 10px;
+	text-overflow: ellipsis;
+	background-color: rgba(255, 255, 255, 0.71);	
+	-o-text-overflow: ellipsis;
+}
+
+.dishImageRecipe{
+	margin:10px;
+	border: 1px solid black;
+	padding: 5px;
+	width:200px;
+	height:165px;
+	float:left;
+	word-wrap: break-word;
+	overflow:hidden;
+	font-size: 10px;
+	text-overflow: ellipsis;
+	background-color: rgba(255, 255, 255, 0.71);	
+	-o-text-overflow: ellipsis;
+}
+
+.dishImage{
+	height:150px;
+	width:100%;
+
+}
+
+.search{
+	float:left;
+	margin-right:40px;
+}
+
+#dishView{
+	background-color:white;
+	border: 1px solid black;
+
+}
+#dishDesc{
+	min-height:100px;
+
+
+}
+#dishDesc img{
+	max-width:500px;
+	max-height: 200px;
+}
+
+#dishIngredients, #preparation{
+	background-color: rgba(233, 233, 69, 0.34);
+	min-height:100px;
+	color:black;
+    padding: 30px;
+    border-left: 3px dotted black;
+    border-bottom: 3px dotted black;
+}
+
+#dishPreperation{
+
+
+	min-height:100px;
+}
+
+#selectedMenu {
+	padding: 10px;
+}
+#selectedMenu table{
+	width: 100%;
+}
+
+#selectedMenu table #td1{
+	width: 80%;
+}
+#selectedMenu table #td2{
+	width: 20%;
+}
+#dishView{
+    padding-right:0px;
+}
+#dishView td{
+	padding: 2px;
+}
+#dishConfirmationHeaderBtn{
+	padding-top: 20px;
+}
+#fullRecipeBtn{
+	float:right;
+	padding:10px;
+	margin:10px;
+}
+
+#dishConfirmationHeader{
+    height: 90px;
+    background-color: rgba(187, 187, 187, 0.34);
+	padding: 10px;
+	padding-left: 30px;
+	
+}

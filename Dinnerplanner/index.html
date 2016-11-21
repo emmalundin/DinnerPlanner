@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dinner planner</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+<div class="container col-lg-12">
+
+  		<!-- HEADER -->
+  		<div class="jumbotron col-lg-12"><h1>Dinner planner</h1><h2>Create the best parties of your life!</h2>
+
+        <!-- homeView -->
+      </div>
+
+      <div class="startInfo col-lg-4" id="startPage">
+        
+         <h1>The Dinner planner service!</h1>
+         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+
+         <button id="startButton" class="btn"><span class="btn">Create new dinner!</span></button>
+
+      
+     </div>
+
+     <!--.................................................-->
+
+     <!-- LEFT VIEW -->
+      <div class="leftView col-lg-3 bg" id="leftView">
+        <div>
+          <h4>My Dinner</h4>
+          Number of guests: <span id="numberOfGuests"></span>
+        </div>
+
+        <div>
+          <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+          <button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+        </div>      
+
+        <!-- list of chosen and total cost --> 
+        <table class="table" id="priceView">
+          <thread>
+
+            <div class="col-lg-6">
+
+              <div><br/><h5>Dishes</h5></div>
+              <div id="chosenDish"></div>
+
+            </div>
+
+            <div class="col-lg-6 col-lg-offset-0">
+              <div><br/><h5>Cost</h5></div>
+              <div id="dishCost"></div>
+            </div>
+
+            <!--<div class="col-lg-1" id="removeBtn">
+              <div><br/><h5>Remove</h5></div>
+              
+            </div>-->
+
+          </thread>
+        </table>
+
+        <hr></hr>
+
+        <div> 
+          <div class="col-lg-6"><h5>Total cost:</h5></div>  
+          <div class="totalCost col-lg-4 col-lg-offset-1" id="totalCost"></div>
+        </div>
+
+
+        <button class="btn confirmbtn" id="confirmDinnerButton">Confirm dinner</button>
+      </div>
+
+
+
+    <!--.................................................-->
+
+
+    <!-- DishlistView -->
+    <div id="dishView" class="col-lg-8 col-lg-offset-1 box">
+      <h4>Select Dish</h4>
+      <hr></hr>
+      <!--Search by name or ingredient -->
+      <input id="dishSearchString" class="btn" type="text" name="string" value="" placeholder="search by name or ingredient">
+      <button id="searchButton" class="btn">Search</button>
+
+      Search by type 
+      <select id="typeSelect" class="dropdown" name="type">
+        <!--<option id="tomRuta" value="choose">Choose</option>-->
+        <option id="typeSelect1" value="starter">Starter</option>
+        <option id="typeSelect2" value="main dish">Main</option>
+        <option id="typeSelect3" value="dessert">Dessert</option>
+      </select>
+     </div>
+
+      <!-- dishListView -->
+      <div id="dishListView" class="col-lg-8 col-lg-offset-1 box">
+
+        <!-- <div id="dishImage"></div>
+        <div id="dishName"></div>
+        <div id="dishDescription"></div> -->
+
+      </div>
+
+   
+
+    <!--.................................................-->
+
+
+
+    <!-- DishinfoView-->
+    <div class="prepView col-lg-8 col-lg-offset-1 bg" id="prepView">
+
+      <div class="col-lg-7 prep"> 
+        <h1 id="prepName"></h1><button class="btn backSelectDish col-lg-offset-1" id="back">Back to select dish</button><br/><br/><br/><br/><br/>
+        <img id="prepImg" width="200px"/>
+        <h3>Preparations</h3>
+        <div class="col-lg-12" id="prep">
+        </div>
+      </div>
+
+      <h3>Ingredients</h3>
+      <h3 id="people"></h3>
+      <div class="ingredients col-lg-5 col-lg-offset-0" id="ingredients"> </div> 
+        
+      
+
+      <div class="ingCost col-lg-3 col-lg-offset-0" id="ingCost"></div>
+
+      <button class="btn confirmDish col-lg-offset-3" id="confirmDishButton">Confirm Dish</button>
+
+    </div>
+
+
+    <!--.................................................-->
+
+
+    <!-- DinnerView -->
+
+    <div id="lastView">
+
+      <div id="headerText" class="jumbotron col-lg-12"></div>
+
+      <div id="menuImgs" class="prepView col-lg-10 col-lg-offset-1 bg">
+
+        <div class="col-lg-3"><img id="starter" width="150px" height="150px"/>
+          <p id="starterName"></p>
+          <p id="starterPrice"></p>
+        </div>
+        <div class="col-lg-3"><img id="main" width="150px" height="150px"/>
+          <p id="mainName"></p>
+          <p id="mainPrice"></p>
+        </div>
+        <div class="col-lg-3"><img id="dessert" width="150px" height="150px"/>
+          <p id="dessertName"></p>
+          <p id="dessertPrice"></p>
+        </div>
+
+        <div id="totalMenuPrice"></div>
+        <br/>
+        <button class="btn print col-lg-offset-0" id="confirmButton">Print full recepie</button>
+        <button class="btn col-lg-offset-0 backSelectDish" id="back">Back and edit</button>
+
+      </div>
+
+    </div>
+
+    <!--.................................................-->
+
+
+    <!-- Overview (after print recepie)-->
+
+    <div id="overView">
+
+      <div id="headerText" class="jumbotron col-lg-12"></div>
+
+
+      <div id="menuImgs" class="prepView2 col-lg-10 col-lg-offset-1 bg">
+
+        <div class="col-lg-12">
+          <div class="col-lg-3"><img id="starter" width="150px" height="150px"/></div>
+          <div class="col-lg-3"><p id="starterName"></p></div>
+          <div class="col-lg-3"><h3>Preparations</h3><p id="starterPrep"></p></div>
+        </div>
+
+        <div class="col-lg-12">
+          <div class="col-lg-3"><img id="main" width="150px" height="150px"/></div>
+          <div class="col-lg-3"><p id="mainName"></p></div>
+          <div class="col-lg-3"><h3>Preparations</h3><p id="mainPrep"></p></div>
+        </div>
+
+
+        <div class="col-lg-12">
+          <div class="col-lg-3"><img id="dessert" width="150px" height="150px"/></div>
+          <div class="col-lg-3"><p id="dessertName"></p></div>
+          <div class="col-lg-3"><h3>Preparations</h3><p id="dessertPrep"></p></div>
+        </div>
+
+
+
+        <div id="totalMenuPrice"></div>
+        <br/>
+
+        <button class="btn print col-lg-offset-10 backSelectDish" id="back">Back and edit</button>
+
+
+      </div>
+
+
+      <!--.................................................-->
+
+  </div>
+
+
+
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+<!-- The application JavaScript code -->
+<script src="js/app.js"></script>
+<script src="js/model/dinnerModel.js"></script>
+
+<script src="js/view/firstView.js"></script>
+<script src="js/view/dishListView.js"></script>
+<script src="js/view/dinnerView.js"></script>
+<script src="js/view/overView.js"></script>
+<script src="js/view/dishinfoView.js"></script>
+<!--<script src="js/view/dishesView.js"></script>-->
+
+<script src="js/controller/mainCtrl.js"></script>
+<script src="js/controller/startCtrl.js"></script>
+<script src="js/controller/dishTypeCtrl.js"></script>
+<script src="js/controller/imageCtrl.js"></script>
+<script src="js/controller/LeftViewCtrl.js"></script>
+<script src="js/controller/confirmDishCtrl.js"></script>
+<script src="js/controller/confirmDinnerCtrl.js"></script>
+<script src="js/controller/removeCtrl.js"></script>
+
+
+</body>
+</html>

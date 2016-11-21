@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dinner planner</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+  <body>
+  	
+	<div class="container col-lg-12">
+
+		<!-- HEADER -->
+		<div class="jumbotron col-lg-12"><h1>Dinner planner</h1><h2>Create the best parties of your life!</h2></div>
+
+		<!-- homeView -->
+
+    <div id="overView">
+
+    <div id="headerText" class="jumbotron col-lg-12"></div>
+
+    <div id="menuImgs" class="prepView col-lg-10 col-lg-offset-1 bg">
+      
+      <div class="col-lg-12">
+      <div class="col-lg-3"><img id="starter" width="150px" height="150px"/></div>
+      <div class="col-lg-3"><p id="starterName"></p></div>
+      <div class="col-lg-3"><h3>Preparations</h3><p id="starterPrep"></p></div>
+      </div>
+
+      <div class="col-lg-12">
+      <div class="col-lg-3"><img id="main" width="150px" height="150px"/></div>
+      <div class="col-lg-3"><p id="mainName"></p></div>
+      <div class="col-lg-3"><h3>Preparations</h3><p id="mainPrep"></p></div>
+      </div>
+
+
+      <div class="col-lg-12">
+      <div class="col-lg-3"><img id="dessert" width="150px" height="150px"/></div>
+      <div class="col-lg-3"><p id="dessertName"></p></div>
+      <div class="col-lg-3"><h3>Preparations</h3><p id="dessertPrep"></p></div>
+      </div>
+
+
+
+      <div id="totalMenuPrice"></div>
+      <br/>
+      
+      <button class="btn print col-lg-offset-10" id="confirmButton">Back and edit</button>
+
+    
+    </div>
+
+		</div>
+	
+
+	</div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+	<!-- The application JavaScript code -->
+	<script src="js/app.js"></script>
+	<script src="js/model/dinnerModel.js"></script>
+	<script src="js/view/firstView.js"></script>
+	<script src="js/view/dishinfoView.js"></script>
+	<script src="js/view/dinnerView.js"></script>
+  <script src="js/view/overView.js"></script>
+
+
+  </body>
+</html>

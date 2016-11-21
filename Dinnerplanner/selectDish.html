@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dinner planner</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style-marre.css">
+
+
+  </head>
+  <body>
+	<div class="container">
+
+		<!-- Heading -->
+		<div class="jumbotron" id="header">
+		<h1>Dinner planner</h1>
+		</div>
+
+			<!-- LEFT VIEW -->
+		<div class="leftView col-lg-3 bg" id="leftView">
+			<div>
+				<h4>My Dinner</h4>
+				Number of people: <span id="numberOfGuests"></span>
+			</div>
+			<div>
+          <button id="minusGuest" class="btn"><span class="glyphicon glyphicon-minus"></span></button>
+				<button id="plusGuest" class="btn"><span class="glyphicon glyphicon-plus"></span></button>
+			</div>			
+
+						<!-- list of chosen and total cost --> 
+						<table class="table" id="priceView">
+							<thread>
+
+								<div class="col-lg-6">
+
+									<div><br/><h5>Dishes</h5></div>
+									<div id="chosenDish"></div>
+
+								</div>
+
+								<div class="col-lg-4 col-lg-offset-1">
+									<div><br/><h5>Cost</h5></div>
+									<div id="dishCost"></div>
+								</div>
+							
+							</thread>
+						</table>
+
+						<hr></hr>
+
+					<div>	
+						<div class="col-lg-6"><h5>Total cost:</h5></div>	
+						<div class="totalCost col-lg-4 col-lg-offset-1" id="totalCost"></div>
+					</div>
+										
+
+				<button class="btn confirmbtn" id="confirmButton">Confirm dinner</button>
+		</div>
+
+		<!-- dishView -->
+		<div id="dishView" class="col-lg-8 col-lg-offset-1 box">
+			<h4>Select Dish</h4>
+			<hr></hr>
+					<!--Search by name or ingredient -->
+					<input id="dishSearchString" class="btn" type="text" name="string" value="" placeholder="search by name or ingredient">
+					<button id="searchButton" class="btn">Search</button>
+
+					Search by type 
+					<select id="typeSelect" class="btn" name="type">
+						<option value="starter">Starter</option>
+						<option value="main dish">Main</option>
+						<option value="dessert">Dessert</option>
+					</select>
+
+		<!-- dishListView -->
+		<div id="dishListView">
+			<div id="dishImage"></div>
+			<div id="dishName"></div>
+			<div id="dishDescription"></div>
+		</div>
+
+				</div>
+
+
+
+		<!-- preparationsView -->
+		<div id="preparationsView">
+		</div>
+
+
+	</div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+	<!-- The application JavaScript code -->
+	<script src="js/app.js"></script>
+	<script src="js/model/dinnerModel.js"></script>
+	<script src="js/view/firstView.js"></script>
+	<script src="js/view/dishinfoView.js"></script>
+	<script src="js/view/dinnerView.js"></script>
+  	<script src="js/view/dishListView.js"></script>
+  	<script src="js/view/overView.js"></script>
+
+  </body>
+</html>
